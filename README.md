@@ -1,13 +1,13 @@
 
 <h1 align="center">
   <a href="">
-    <img src="public/assets/react-portfolio.svg" alt="Project Banner Image">
+    <img src="public/images/react-portfolio.svg" alt="Project Banner Image">
   </a>
 </h1>
 
 ## Author
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://portfolio-laura-lyckholm.netlify.app/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://vue-portfolio-laura-lyckholm.netlify.app/)
 [![@Technigo](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lauralyckholm/)
 [![github](https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/LauraLyckholm)
 
@@ -31,4 +31,4 @@ Through this project, I, Laura, have learned invaluable lessons in Vue developme
 
 ## Screenshots
 
-![App Screenshot](public/assets/screenshot-of-portfolio.png)
+![App Screenshot](public/images/screenshot-of-portfolio.png)
