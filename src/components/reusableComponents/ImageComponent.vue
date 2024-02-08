@@ -1,24 +1,22 @@
+<script setup>
+import { computed } from "vue"
+
+const props = defineProps({
+    sectionClassName: String,
+    elementClassName: String,
+    link: String,
+    imageAltText: String,
+})
+
+const createAltText = computed(() => `Image of ${props.imageAltText}`)
+
+</script>
+
 <template>
-    <section :class="imageComp.sectionClassName">
-        <img :class="imageComp.elementClassName" :src="imageComp.image.src" :alt="imageComp.image.createAltText" />
+    <section :class="sectionClassName">
+        <img :class="elementClassName" :src="link" :alt="createAltText" />
     </section>
 </template>
-
-<script>
-export default {
-    name: "ImageComponent",
-    props: {
-        imageComp: {
-            type: Object,
-        }
-    },
-    computed: {
-        createAltText() {
-            return `Image of ${this.alt}`
-        }
-    }
-}
-</script>
 
 <style>
 /* ------------ OVERALL ------------ */

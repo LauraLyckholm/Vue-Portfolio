@@ -1,50 +1,46 @@
+<script setup>
+import ImageComponent from "./reusableComponents/ImageComponent.vue";
+import SubHeading from "./reusableComponents/SubHeading.vue";
+import NormalText from "./reusableComponents/NormalText.vue";
+
+const imageData = [
+    {
+        sectionClassName: "profile-image",
+        elementClassName: "circle-img",
+        image: {
+            src: "/images/profile-image-2.webp",
+            alt: "Laura",
+        },
+    },
+];
+
+const text = [
+    {
+        h1: "Frontend Developer & Web Designer",
+        h3: "Hi, I'm Laura Lyckholm",
+        introText: "Laura is a frontend developer with a background in web design, known for her keen eye for details and ability to learn new technologies, languages and programs. She creates applications with both the designer and user in mind, and does so with a constant smile on her face. Her drive for perfection and her background in design makes her a valuable asset to any project and a standout in the technology field."
+    }
+]
+
+</script>
+
 <template>
     <header tabIndex="0">
-        <ImageComponent v-for="imageComp in imagesComp" :key="imageComp.src" :imageComp="imageComp">
-        </ImageComponent>
-
+        <ImageComponent sectionClassName="profile-image" elementClassName="circle-img" link="./images/profile-image-2.webp"
+            imageAltText="Laura" />
         <section class="headings">
-            <h3>{{ h3 }}</h3>
-            <h1 class="introduction-h2">{{ h1 }}</h1>
+            <SubHeading :text="text[0].h3" className="test" />
+            <h1 class="introduction-h1">{{ text[0].h1 }}</h1>
         </section>
         <section class="intro-text">
-            <p class="normal">{{ introText }}</p>
+            <NormalText :text="text[0].introText" />
         </section>
     </header>
 </template>
 
-<script>
-import ImageComponent from "./reusableComponents/ImageComponent.vue"
-
-export default {
-    name: "Introduction",
-    components: {
-        ImageComponent,
-    },
-
-    data() {
-        return {
-            imagesComp: [
-                {
-                    sectionClassName: "profile-image",
-                    elementClassName: "circle-img",
-                    image: {
-                        src: "/images/profile-image-2.webp",
-                        alt: "Laura",
-
-                    },
-                }],
-            h1: "Frontend Developer & Web Designer",
-            h3: "Hi, I'm Laura Lyckholm",
-            introText: "Laura is a frontend developer with a background in web design, known for her keen eye for details and ability to learn new technologies, languages and programs. She creates applications with both the designer and user in mind, and does so with a constant smile on her face. Her drive for perfection and her background in design makes her a valuable asset to any project and a standout in the technology field."
-        }
-    }
-}
-</script>
-
 <style scoped>
 /* ------------ TYPOGRAPHY ------------ */
-.introduction-h2 {
+.introduction-h1 {
     color: var(--primary);
 }
 
